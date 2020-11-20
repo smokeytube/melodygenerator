@@ -1,27 +1,133 @@
 import winsound
 import random
-
+import time
 
 #notelengths
-sixteenth = 300
-eighth = 600
-dottedeight = 900
-quarter = 1200
-dottedquarter = 1800
-half = 2400
-dottedhalf = 3600
-whole = 4800
+sixteenth = 100 #1
+eighth = 200 #2
+dottedeight = 300 #3
+quarter = 400 #4
+dottedquarter = 600 #6
+half = 800 #8
+dottedhalf = 1200 #12
+whole = 1600 #16
 
-#notepitches
-c4 = 261.6256
-cs4 = 277.1826
-d4 = 293.6648
-ds4 = 311.1270
-e4 = 329.6276
-f4 = 349.2282
-fs4 = 369.9944
-g4 = 391.9954
-gs4 = 415.3047
+#notepitchnes
+c4 = 262
+cs4 = 277
+d4 = 294
+ds4 = 311
+e4 = 330
+f4 = 349
+fs4 = 370
+g4 = 392
+gs4 = 415
 a4 = 440
+as4 = 466
+b4 = 494
+c5 = 523
+
+randpitchn = 0
+notelength = 0
+pitchn = c4
+
+def length():
+    if randlen == 1:
+        lengthn = sixteenth
+    elif randlen == 2:
+        lengthn = eighth
+    elif randlen == 3:
+        lengthn = dottedeight
+    elif randlen == 4:
+        lengthn = quarter
+    elif randlen == 5:
+        lengthn = dottedquarter
+    elif randlen == 6:
+        lengthn = half
+    elif randlen == 7:
+        lengthn = dottedhalf
+    elif randlen == 8:
+        lengthn = whole
 
 
+def pitch():
+    if randpitch == 1:
+        pitchn = c4
+    elif randpitch == 2:
+        pitchn = cs4
+    elif randpitch == 3:
+        pitchn = d4
+    elif randpitch == 4:
+        pitchn = ds4
+    elif randpitch == 5:
+        pitchn = e4
+    elif randpitch == 6:
+        pitchn = f4
+    elif randpitch == 7:
+        pitchn = fs4
+    elif randpitch == 8:
+        pitchn = g4
+    elif randpitch == 9:
+        pitchn = gs4
+    elif randpitch == 10:
+        pitchn = a4
+    elif randpitch == 11:
+        pitchn = as4
+    elif randpitch == 12:
+        pitchn = b4
+    elif randpitch == 13:
+        pitchn = c5
+
+
+
+while True:
+    randlen = random.randint(1, 8)
+    randpitch = random.randint(1, 13)
+    if randlen == 1:
+        lengthn = sixteenth
+    elif randlen == 2:
+        lengthn = eighth
+    elif randlen == 3:
+        lengthn = dottedeight
+    elif randlen == 4:
+        lengthn = quarter
+    elif randlen == 5:
+        lengthn = dottedquarter
+    elif randlen == 6:
+        lengthn = half
+    elif randlen == 7:
+        lengthn = dottedhalf
+    elif randlen == 8:
+        lengthn = whole
+    else:
+        lengthn = whole
+
+    if randpitch == 1:
+        pitchn = c4
+    elif randpitch == 2:
+        pitchn = cs4
+    elif randpitch == 3:
+        pitchn = d4
+    elif randpitch == 4:
+        pitchn = ds4
+    elif randpitch == 5:
+        pitchn = e4
+    elif randpitch == 6:
+        pitchn = f4
+    elif randpitch == 7:
+        pitchn = fs4
+    elif randpitch == 8:
+        pitchn = g4
+    elif randpitch == 9:
+        pitchn = gs4
+    elif randpitch == 10:
+        pitchn = a4
+    elif randpitch == 11:
+        pitchn = as4
+    elif randpitch == 12:
+        pitchn = b4
+    elif randpitch == 13:
+        pitchn = c5
+    else:
+        pitchn = c5
+    winsound.Beep(pitchn, lengthn)
