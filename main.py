@@ -32,6 +32,8 @@ notelength = 0
 pitchn = c4
 
 def boop():
+    randlen = random.randint(1, 8)
+    randpitch = random.randint(1, 13)
     if randlen == 1:
         lengthn = sixteenth
     elif randlen == 2:
@@ -82,23 +84,56 @@ def boop():
     winsound.Beep(pitchn, lengthn)
 
 while True:
-    randlen = random.randint(1, 8)
-    randpitch = random.randint(1, 13)
     boop()
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    randlen = random.randint(1, 8)
+    randpitch = random.randint(1, 13)
     if randpitch == 2 and randlen == 2:
         boop()
+        randlen = random.randint(1, 8)
+        randpitch = random.randint(1, 13)
         if randpitch == 3 and randlen == 2:
             boop()
+            randlen = random.randint(1, 8)
+            randpitch = random.randint(1, 13)
             if randpitch == 4 and randlen == 2:
                 boop()
+                randlen = random.randint(1, 8)
+                randpitch = random.randint(1, 13)
                 if randpitch == 5 and randlen == 2:
                     boop()
+                    randlen = random.randint(1, 8)
+                    randpitch = random.randint(1, 13)
                     if randpitch == 3 and randlen == 4:
                         boop()
+                        randlen = random.randint(1, 8)
+                        randpitch = random.randint(1, 13)
                         if randpitch == 1 and randlen == 2:
                             boop()
+                            randlen = random.randint(1, 8)
+                            randpitch = random.randint(1, 13)
                             if randpitch == 2 and randlen == 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8:
                                 print ("lick")
                                 time.sleep(100000)
